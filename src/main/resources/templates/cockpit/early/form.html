@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/head :: head(links)"/>
+<body>
+<div class="ok-body" id="app" v-cloak>
+    <template>
+        <i-form ref="checkForm" :model="early" :rules="ruleValidate" :label-width="100">
+             <form-item prop="id" label="主键：">
+                 <i-input maxlength="20" v-model="early.id" placeholder="请输入主键"></i-input>
+             </form-item>
+             <form-item prop="warningSource" label="预警来源 0-手动录入 1-系统生成：">
+                 <i-input maxlength="20" v-model="early.warningSource" placeholder="请输入预警来源 0-手动录入 1-系统生成"></i-input>
+             </form-item>
+             <form-item prop="warningType" label="预警类型 0-业务预警 ：">
+                 <i-input maxlength="20" v-model="early.warningType" placeholder="请输入预警类型 0-业务预警 "></i-input>
+             </form-item>
+             <form-item prop="warningCode" label="0-代表所有指数预警，预警对应的code(当前自己设置，后期对应中枢上编号)：">
+                 <i-input maxlength="20" v-model="early.warningCode" placeholder="请输入0-代表所有指数预警，预警对应的code(当前自己设置，后期对应中枢上编号)"></i-input>
+             </form-item>
+             <form-item prop="warningContent" label="预警详细信息：">
+                 <i-input maxlength="20" v-model="early.warningContent" placeholder="请输入预警详细信息"></i-input>
+             </form-item>
+             <form-item prop="warningStarttime" label="生效时间：">
+                 <i-input maxlength="20" v-model="early.warningStarttime" placeholder="请输入生效时间"></i-input>
+             </form-item>
+             <form-item prop="warningEndtime" label="结束是假：">
+                 <i-input maxlength="20" v-model="early.warningEndtime" placeholder="请输入结束是假"></i-input>
+             </form-item>
+             <form-item prop="status" label="状态（0正常 1停用）：">
+                 <i-input maxlength="20" v-model="early.status" placeholder="请输入状态（0正常 1停用）"></i-input>
+             </form-item>
+             <form-item prop="createBy" label="创建者：">
+                 <i-input maxlength="20" v-model="early.createBy" placeholder="请输入创建者"></i-input>
+             </form-item>
+             <form-item prop="createTime" label="创建时间：">
+                 <i-input maxlength="20" v-model="early.createTime" placeholder="请输入创建时间"></i-input>
+             </form-item>
+             <form-item prop="updateBy" label="更新者：">
+                 <i-input maxlength="20" v-model="early.updateBy" placeholder="请输入更新者"></i-input>
+             </form-item>
+             <form-item prop="updateTime" label="更新时间：">
+                 <i-input maxlength="20" v-model="early.updateTime" placeholder="请输入更新时间"></i-input>
+             </form-item>
+        </i-form>
+    </template>
+</div>
+<div th:replace="common/foot :: foot(script)"></div>
+<script th:inline="none">
+var vm = new Vue({
+    el: '#app',
+    data:{
+        early:{},
+        ruleValidate : {
+                 id: [
+                    { required: true, message: '主键不能为空', trigger: 'blur' }
+                 ],
+                 warningSource: [
+                    { required: true, message: '预警来源 0-手动录入 1-系统生成不能为空', trigger: 'blur' }
+                 ],
+                 warningType: [
+                    { required: true, message: '预警类型 0-业务预警 不能为空', trigger: 'blur' }
+                 ],
+                 warningCode: [
+                    { required: true, message: '0-代表所有指数预警，预警对应的code(当前自己设置，后期对应中枢上编号)不能为空', trigger: 'blur' }
+                 ],
+                 warningContent: [
+                    { required: true, message: '预警详细信息不能为空', trigger: 'blur' }
+                 ],
+                 warningStarttime: [
+                    { required: true, message: '生效时间不能为空', trigger: 'blur' }
+                 ],
+                 warningEndtime: [
+                    { required: true, message: '结束是假不能为空', trigger: 'blur' }
+                 ],
+                 status: [
+                    { required: true, message: '状态（0正常 1停用）不能为空', trigger: 'blur' }
+                 ],
+                 createBy: [
+                    { required: true, message: '创建者不能为空', trigger: 'blur' }
+                 ],
+                 createTime: [
+                    { required: true, message: '创建时间不能为空', trigger: 'blur' }
+                 ],
+                 updateBy: [
+                    { required: true, message: '更新者不能为空', trigger: 'blur' }
+                 ],
+                 updateTime: [
+                    { required: true, message: '更新时间不能为空', trigger: 'blur' }
+                 ],
+		}
+    },
+    methods: {
+        acceptClick : function(dialog){
+          vm.$refs.checkForm.validate(function(valid){
+            if (valid) {
+                layui.use(["okUtils", "okLayer"], function () {
+                     okUtils = layui.okUtils;
+                     okLayer = layui.okLayer;
+                     okUtils.ajaxCloud({
+                        url:"/cockpit/early/save",
+                        param : vm.early,
+                        json:true,
+                        success : function(result) {
+                             okLayer.msg.greenTick(result.msg, function () {
+                                  dialog.load();
+                             })
+                        }
+                    });
+                });
+            }
+          });
+	    }
+    },
+    created: function() {
+
+    }
+});
+</script>
+</body>
+</html>
