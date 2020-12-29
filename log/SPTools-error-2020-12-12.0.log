@@ -1,0 +1,2 @@
+2020-12-12 20:55:40.680 ERROR com.tools.module.app.util.AliYunUtils Line:42  - 阿里云OSS初始化失败，请配置正确的参数
+2020-12-12 20:55:40.993 ERROR com.tools.module.app.util.MinIoUtils Line:42  - MinIo初始化失败，请配置正确的参数

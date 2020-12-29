@@ -1,0 +1,42 @@
+2020-12-07 20:10:16.275 INFO  com.tools.Application Line:55  - Starting Application on BF-20191009JYNE with PID 8116 (D:\myTest\SPTools\target\classes started by Administrator in D:\myTest\SPTools)
+2020-12-07 20:10:16.291 INFO  com.tools.Application Line:655 - The following profiles are active: dev
+2020-12-07 20:10:24.995 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+2020-12-07 20:10:24.995 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-12-07 20:10:25.853 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+2020-12-07 20:10:27.055 INFO  org.quartz.impl.StdSchedulerFactory Line:1220 - Using default implementation for ThreadExecutor
+2020-12-07 20:10:27.070 INFO  org.quartz.simpl.SimpleThreadPool Line:268 - Job execution threads will use class loader of thread: main
+2020-12-07 20:10:27.086 INFO  org.quartz.core.SchedulerSignalerImpl Line:61  - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2020-12-07 20:10:27.086 INFO  org.quartz.core.QuartzScheduler Line:229 - Quartz Scheduler v.2.3.2 created.
+2020-12-07 20:10:27.101 INFO  org.quartz.core.QuartzScheduler Line:294 - Scheduler meta-data: Quartz Scheduler (v2.3.2) 'clusteredScheduler' with instanceId 'BF-20191009JYNE1607343027070'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.springframework.scheduling.quartz.LocalDataSourceJobStore' - which supports persistence. and is clustered.
+
+2020-12-07 20:10:27.101 INFO  org.quartz.impl.StdSchedulerFactory Line:1374 - Quartz scheduler 'clusteredScheduler' initialized from an externally provided properties instance.
+2020-12-07 20:10:27.101 INFO  org.quartz.impl.StdSchedulerFactory Line:1378 - Quartz scheduler version: 2.3.2
+2020-12-07 20:10:27.101 INFO  org.quartz.core.QuartzScheduler Line:2293 - JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@470ad01c
+2020-12-07 20:10:30.767 INFO  org.activiti.engine.compatibility.DefaultActiviti5CompatibilityHandlerFactory Line:38  - Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2020-12-07 20:10:31.095 INFO  org.activiti.engine.impl.ProcessEngineImpl Line:87  - ProcessEngine default created
+2020-12-07 20:10:31.095 INFO  org.activiti.engine.impl.asyncexecutor.DefaultAsyncJobExecutor Line:169 - Starting up the default async job executor [org.activiti.spring.SpringAsyncExecutor].
+2020-12-07 20:10:31.095 INFO  org.activiti.engine.impl.asyncexecutor.AcquireTimerJobsRunnable Line:49  - {} starting to acquire async jobs due
+2020-12-07 20:10:31.095 INFO  org.activiti.engine.impl.asyncexecutor.AcquireAsyncJobsDueRunnable Line:45  - {} starting to acquire async jobs due
+2020-12-07 20:10:31.095 INFO  org.activiti.engine.impl.asyncexecutor.ResetExpiredJobsRunnable Line:51  - {} starting to reset expired jobs
+2020-12-07 20:10:33.217 INFO  org.redisson.Version Line:41  - Redisson 2.11.5
+2020-12-07 20:10:33.887 INFO  org.redisson.connection.pool.MasterPubSubConnectionPool Line:145 - 1 connections initialized for /127.0.0.1:6379
+2020-12-07 20:10:33.887 INFO  org.redisson.connection.pool.MasterConnectionPool Line:145 - 10 connections initialized for /127.0.0.1:6379
+2020-12-07 20:10:36.352 INFO  org.quartz.core.QuartzScheduler Line:547 - Scheduler clusteredScheduler_$_BF-20191009JYNE1607343027070 started.
+2020-12-07 20:10:36.524 INFO  com.tools.Application Line:61  - Started Application in 21.371 seconds (JVM running for 24.947)
+2020-12-07 20:10:36.774 INFO  com.tools.Application Line:31  - 一个能够让程序猿快速开发的炒鸡工具箱
+2020-12-07 20:11:09.525 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-07 20:11:09.649 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:233 - Enabling session validation scheduler...
+2020-12-07 20:11:17.169 INFO  io.lettuce.core.EpollProvider Line:68  - Starting without optional epoll library
+2020-12-07 20:11:17.173 INFO  io.lettuce.core.KqueueProvider Line:70  - Starting without optional kqueue library
+2020-12-07 21:11:10.328 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:275 - Validating all active sessions...
+2020-12-07 21:11:10.349 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:308 - Finished session validation.  No sessions were stopped.
+2020-12-07 22:11:10.994 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:275 - Validating all active sessions...
+2020-12-07 22:11:11.003 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:308 - Finished session validation.  No sessions were stopped.
+2020-12-07 23:11:11.672 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:275 - Validating all active sessions...
+2020-12-07 23:11:11.690 INFO  org.apache.shiro.session.mgt.AbstractValidatingSessionManager Line:308 - Finished session validation.  No sessions were stopped.
